@@ -5,6 +5,7 @@ public class GameManager : MonoBehaviour
 {
     [Header("Game Settings")]
     [SerializeField] float _stageTime;
+    [SerializeField] float _baseGrowingSpeed;
 
     [Header("UI References")]
     [SerializeField] GameObject _upgradePanel;
@@ -14,7 +15,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
 
     public float StageProgress => (Time.time - _startTime) / _stageTime;
-    public int CurrentStage => _currentStage;
+    public float GrowingSpeed => _baseGrowingSpeed;
     
     float _startTime;
     int _currentStage = 1;
