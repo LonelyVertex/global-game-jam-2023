@@ -49,12 +49,13 @@ public class PlantingManager : MonoBehaviour
         _lifeForce += amount;
     }
 
-    public void StartPlanting(GameObject prefab, int cost)
+    public void StartPlanting(GameObject prefab, int cost, float radius)
     {
         _isSelecting = true;
         _currentPrefab = prefab;
         _currentCost = cost;
         selection.gameObject.SetActive(true);
+        selection.SetRadius(radius);
     }
 
     void OnSelect(Vector3 position)
