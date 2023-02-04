@@ -41,6 +41,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Roots
+    uniqueID: 274571689
+    locked: 0
+  - name: GroundEffect
+    uniqueID: 3998870081
+    locked: 0
   - name: Lumberjack
     uniqueID: 332952767
+    locked: 0
+  - name: Tree
+    uniqueID: 1718740099
     locked: 0
