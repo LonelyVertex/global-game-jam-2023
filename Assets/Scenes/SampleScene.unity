@@ -1263,6 +1263,7 @@ MonoBehaviour:
   prefab: {fileID: 8952509624734600249, guid: 744fba2258ed84c2f97306d10f16a4f6, type: 3}
   cost: 0
   plantRadius: 0
+  keyCode: 49
 --- !u!1 &1338068136
 GameObject:
   m_ObjectHideFlags: 0
@@ -1402,6 +1403,7 @@ MonoBehaviour:
   prefab: {fileID: 3992032575905870592, guid: a2096a2a386564891a4a2db8b9eaeb8b, type: 3}
   cost: 10
   plantRadius: 2
+  keyCode: 50
 --- !u!1 &1353010582
 GameObject:
   m_ObjectHideFlags: 0

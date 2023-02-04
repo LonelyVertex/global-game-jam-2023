@@ -7,16 +7,30 @@ public class PlantingActionButton : MonoBehaviour
     [SerializeField] GameObject prefab;
     [SerializeField] int cost;
     [SerializeField] float plantRadius;
+    [SerializeField] KeyCode keyCode;
 
     bool _canPlant;
-    
+
+    bool IsUsable => !PlantingManager.Instance.IsPlanting && cost <= PlantingManager.Instance.LifeForce;
+
     void Start()
     {
-        button.onClick.AddListener(() => { PlantingManager.Instance.StartPlanting(prefab, cost, plantRadius); });
+        button.onClick.AddListener(StartPlanting);
     }
 
     void Update()
     {
-        button.interactable = !PlantingManager.Instance.IsPlanting &&  cost <= PlantingManager.Instance.LifeForce;
+        button.interactable = IsUsable;
+
+        if (IsUsable && Input.GetKeyUp(keyCode))
+        {
+            StartPlanting();
+        }
+    }
+
+    void StartPlanting()
+    {
+        if (!IsUsable) return;
+        PlantingManager.Instance.StartPlanting(prefab, cost, plantRadius);
     }
 }
