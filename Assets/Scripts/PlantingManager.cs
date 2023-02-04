@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 
 public class PlantingManager : MonoBehaviour
@@ -13,7 +14,7 @@ public class PlantingManager : MonoBehaviour
     public int LifeForce => _lifeForce;
     public bool IsPlanting => _isPlanting;
 
-    int _lifeForce;
+    int _lifeForce = 100;
 
     bool _isSelecting;
     GameObject _currentPrefab;
@@ -65,10 +66,23 @@ public class PlantingManager : MonoBehaviour
         _targetPosition = position;
         _lifeForce -= _currentCost;
 
-        var rootGO = Instantiate(growingRootPrefab, Vector3.zero, Quaternion.identity);
+        var rootGO = Instantiate(growingRootPrefab, GetGrowingStartPosition(position), Quaternion.identity);
         _currentGrowingRoot = rootGO.GetComponent<GrowingRoot>();
         _currentGrowingRoot.OnReachDestination += OnReachDestination;
         _currentGrowingRoot.SetTarget(position);
+    }
+
+    Vector3 GetGrowingStartPosition(Vector3 targetPosition)
+    {
+        var closest = FindObjectsOfType<LifeForceGenerator>()
+            .OrderBy(tree =>
+            {
+                var treeRadius = tree.GetComponent<CircleCollider2D>().radius;
+                return Vector3.Distance(tree.transform.position, targetPosition) - treeRadius;
+            })
+            .FirstOrDefault();
+
+        return closest ? closest.transform.position : Vector3.zero;
     }
 
     void OnReachDestination()

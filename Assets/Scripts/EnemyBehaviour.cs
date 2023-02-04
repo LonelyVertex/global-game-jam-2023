@@ -69,7 +69,7 @@ public class EnemyBehaviour : MonoBehaviour
     {
         if (_isInRange) return;
 
-        var trees = GameObject.FindObjectsOfType<TreeBehaviour>()
+        var trees = FindObjectsOfType<TreeBehaviour>()
             .OrderBy((tree) => Vector3.Distance(transform.position, tree.transform.position))
             .ToArray();
 

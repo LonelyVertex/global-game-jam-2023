@@ -12,15 +12,13 @@ public class GrowingRoot : MonoBehaviour
     float _distance;
 
     bool _isGrowing;
-
-    void Start()
-    {
-        _startPosition = transform.position;
-    }
+    
 
     public void SetTarget(Vector3 target)
     {
+        _startPosition = transform.position;
         _targetPosition = target;
+        lineRenderer.SetPosition(0, _startPosition);
         lineRenderer.SetPosition(1, _startPosition);
         _distance = Vector3.Distance(_startPosition, _targetPosition);
         _isGrowing = true;
