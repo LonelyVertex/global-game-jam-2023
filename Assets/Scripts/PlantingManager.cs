@@ -1,9 +1,10 @@
+using System;
 using UnityEngine;
 
 public class PlantingManager : MonoBehaviour
 {
-    public const float LifeForceEvery = 3; 
-    
+    public const float LifeForceEvery = 3;
+
     [SerializeField] Selection selection;
     [SerializeField] GrowingRoot growingRoot;
 
@@ -13,12 +14,16 @@ public class PlantingManager : MonoBehaviour
     public static PlantingManager Instance { get; private set; }
 
     public int LifeForce => _lifeForce;
-
-    GameObject _currentPrefab;
-    int _currentCost;
-    Vector3 _targetPosition;
+    public bool IsPlanting => _isPlanting;
 
     int _lifeForce;
+
+    bool _isSelecting;
+    GameObject _currentPrefab;
+    int _currentCost;
+
+    bool _isPlanting;
+    Vector3 _targetPosition;
 
     void Awake()
     {
@@ -31,6 +36,14 @@ public class PlantingManager : MonoBehaviour
         growingRoot.OnReachDestination += OnReachDestination;
     }
 
+    void Update()
+    {
+        if (_isSelecting && Input.GetKeyDown(KeyCode.Escape))
+        {
+            CancelSelection();
+        }
+    }
+
     public void AddLifeForce(int amount)
     {
         _lifeForce += amount;
@@ -38,33 +51,30 @@ public class PlantingManager : MonoBehaviour
 
     public void StartPlanting(GameObject prefab, int cost)
     {
+        _isSelecting = true;
         _currentPrefab = prefab;
         _currentCost = cost;
         selection.gameObject.SetActive(true);
     }
 
-    // public void UseAttack()
-    // {
-    //     _currentPrefab = attackPrefab;
-    //     selection.gameObject.SetActive(true);
-    // }
-    //
-    // public void UseTree1()
-    // {
-    //     _currentPrefab = tree1Prefab;
-    //     selection.gameObject.SetActive(true);
-    // }
-
     void OnSelect(Vector3 position)
     {
+        _isSelecting = false;
+        _isPlanting = true;
         _targetPosition = position;
         _lifeForce -= _currentCost;
-        selection.gameObject.SetActive(false);
         growingRoot.SetTarget(position);
     }
 
     void OnReachDestination()
     {
+        _isPlanting = false;
+        selection.gameObject.SetActive(false);
         Instantiate(_currentPrefab, _targetPosition, Quaternion.identity);
+    }
+
+    void CancelSelection()
+    {
+        selection.gameObject.SetActive(false);
     }
 }

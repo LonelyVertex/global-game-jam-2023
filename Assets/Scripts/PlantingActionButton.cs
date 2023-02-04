@@ -14,6 +14,6 @@ public class PlantingActionButton : MonoBehaviour
 
     void Update()
     {
-        button.interactable = cost <= PlantingManager.Instance.LifeForce;
+        button.interactable = !PlantingManager.Instance.IsPlanting &&  cost <= PlantingManager.Instance.LifeForce;
     }
 }

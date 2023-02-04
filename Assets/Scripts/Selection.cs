@@ -4,9 +4,11 @@ using UnityEngine;
 public class Selection : MonoBehaviour
 {
     public Action<Vector3> OnSelect;
-    
+
     void Update()
     {
+        if (PlantingManager.Instance.IsPlanting) return;
+        
         var worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         transform.position = new Vector3(worldPosition.x, worldPosition.y, transform.position.z);
 
