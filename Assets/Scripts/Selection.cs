@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Selection : MonoBehaviour
 {
-    [SerializeField] SpriteRenderer spriteRenderer;
+    [SerializeField] SpriteRenderer[] spriteRenderers;
     [SerializeField] Color defaultColor;
     [SerializeField] Color disabledColor;
     [SerializeField] LayerMask treeLayer;
@@ -21,7 +21,7 @@ public class Selection : MonoBehaviour
 
     void Start()
     {
-        spriteRenderer.color = defaultColor;
+        SetColor(defaultColor);
     }
 
     public void SetRadius(float radius)
@@ -48,13 +48,29 @@ public class Selection : MonoBehaviour
     {
         if (_radius > 0 && Physics2D.OverlapCircle(transform.position, _radius, treeLayer))
         {
-            spriteRenderer.color = disabledColor;
+            SetColor(disabledColor);
             _canPlant = false;
         }
         else
         {
-            spriteRenderer.color = defaultColor;
+            SetColor(defaultColor);
             _canPlant = true;
+        }
+    }
+
+    void SetColor(Color color)
+    {
+        foreach (var spriteRenderer in spriteRenderers)
+        {
+            spriteRenderer.color = color;
+        }
+    }
+
+    public void SetCursorRenderer(int selected)
+    {
+        for (var i = 0; i < spriteRenderers.Length; i++)
+        {
+            spriteRenderers[i].gameObject.SetActive(i == selected);
         }
     }
 }

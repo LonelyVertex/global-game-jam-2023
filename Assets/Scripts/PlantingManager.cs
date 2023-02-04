@@ -49,13 +49,14 @@ public class PlantingManager : MonoBehaviour
         _lifeForce += amount;
     }
 
-    public void StartPlanting(GameObject prefab, int cost, float radius, bool remains)
+    public void StartPlanting(GameObject prefab, int cost, float radius, bool remains, int cursor)
     {
         _isSelecting = true;
         _currentPrefab = prefab;
         _currentCost = cost;
         _currentGrowingRootRemains = remains;
         selection.gameObject.SetActive(true);
+        selection.SetCursorRenderer(cursor);
         selection.SetRadius(radius);
     }
 
