@@ -211,6 +211,7 @@ GameObject:
   - component: {fileID: 480222599}
   - component: {fileID: 480222598}
   - component: {fileID: 480222600}
+  - component: {fileID: 480222601}
   m_Layer: 6
   m_Name: MotherTree
   m_TagString: Untagged
@@ -231,7 +232,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 796414544}
-  - {fileID: 1464856921}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -277,6 +277,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 1000
+  circleCollider2D: {fileID: 480222599}
+--- !u!114 &480222601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 480222596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0aecd83a2898e4cec8dc3e30af56dc32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeForceGenerator: {fileID: 480222598}
   circleCollider2D: {fileID: 480222599}
 --- !u!1 &523189514
 GameObject:
@@ -344,7 +358,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &609921525
 GameObject:
@@ -1338,7 +1352,6 @@ MonoBehaviour:
   camera: {fileID: 963194227}
   baseSize: 27
   stageSize: 24
-  resizeSpeed: 5
 --- !u!114 &963194230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2266,13 +2279,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1464856920}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 480222597}
-  m_RootOrder: 1
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1464856922
 SpriteRenderer:
@@ -2706,9 +2719,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1357dbc497fd042cf9a03bc989529a5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stageTime: 60
+  stageTime: 15
   baseGrowingSpeed: 1
   baseSlow: 0.5
+  resizeSpeed: 5
   motherTree: {fileID: 480222600}
   upgradePanel: {fileID: 1130693886}
   motherTreeHealthSlider: {fileID: 697732881}
@@ -3051,7 +3065,7 @@ RectTransform:
   - {fileID: 1353010583}
   - {fileID: 1724825118}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3391,6 +3405,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1999316986}
   - component: {fileID: 1999316987}
+  - component: {fileID: 1999316988}
   m_Layer: 0
   m_Name: Selection
   m_TagString: Untagged
@@ -3412,7 +3427,7 @@ Transform:
   m_Children:
   - {fileID: 1061579191}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1999316987
 MonoBehaviour:
@@ -3432,6 +3447,18 @@ MonoBehaviour:
   treeLayer:
     serializedVersion: 2
     m_Bits: 64
+--- !u!114 &1999316988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999316984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9825af91f5f6a4577a35cee024e8d506, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2064811353
 GameObject:
   m_ObjectHideFlags: 0

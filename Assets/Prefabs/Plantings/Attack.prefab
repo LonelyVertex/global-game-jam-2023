@@ -94,6 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2061064417087045436}
   - component: {fileID: -8638326307641462651}
+  - component: {fileID: 4994768711673648556}
   m_Layer: 0
   m_Name: Attack
   m_TagString: Untagged
@@ -131,7 +132,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 100
-  radius: 3
+  circleCollider2D: {fileID: 4994768711673648556}
+--- !u!58 &4994768711673648556
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8952509624734600249}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 3
 --- !u!1001 &776479523651970643
 PrefabInstance:
   m_ObjectHideFlags: 0

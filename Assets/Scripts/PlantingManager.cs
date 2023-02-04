@@ -77,7 +77,7 @@ public class PlantingManager : MonoBehaviour
         var closest = FindObjectsOfType<LifeForceGenerator>()
             .OrderBy(tree =>
             {
-                var treeRadius = tree.GetComponent<CircleCollider2D>().radius;
+                var treeRadius = tree.GetComponent<TreeBehaviour>().Radius;
                 return Vector3.Distance(tree.transform.position, targetPosition) - treeRadius;
             })
             .FirstOrDefault();
@@ -89,9 +89,11 @@ public class PlantingManager : MonoBehaviour
     {
         _isPlanting = false;
         selection.gameObject.SetActive(false);
-        Instantiate(_currentPrefab, _targetPosition, Quaternion.Euler(0, 0, Random.Range(0, 360)));
+        
+        var plantedGO = Instantiate(_currentPrefab, _targetPosition, Quaternion.Euler(0, 0, Random.Range(0, 360)));
+        plantedGO.transform.localScale = new Vector3(GameManager.Instance.CurrentStage, GameManager.Instance.CurrentStage, 1);
+        
         _currentGrowingRoot.OnReachDestination -= OnReachDestination;
-
         if (!_currentGrowingRootRemains)
         {
             Destroy(_currentGrowingRoot.gameObject);

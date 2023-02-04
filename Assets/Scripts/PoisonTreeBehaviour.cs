@@ -7,6 +7,8 @@ public class PoisonTreeBehaviour : MonoBehaviour
     [SerializeField] float radius;
     [SerializeField] float damageCooldown;
 
+    float Radius => radius * transform.localScale.x;
+    
     void OnDrawGizmos()
     {
         Gizmos.color = Color.magenta;
@@ -21,7 +23,7 @@ public class PoisonTreeBehaviour : MonoBehaviour
     void DamageEnemies()
     {
         var enemies = GameObject.FindObjectsOfType<EnemyBehaviour>()
-            .Where(enemy => Vector3.Distance(transform.position, enemy.transform.position) <= radius);
+            .Where(enemy => Vector3.Distance(transform.position, enemy.transform.position) <= Radius);
 
         foreach (var enemy in enemies)
         {

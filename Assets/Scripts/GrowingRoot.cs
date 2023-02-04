@@ -39,7 +39,7 @@ public class GrowingRoot : MonoBehaviour
         }
 
         var direction = _targetPosition - _startPosition;
-        var target = lineRenderer.GetPosition(1) + direction * GameManager.Instance.GrowingSpeed * Time.deltaTime;
+        var target = lineRenderer.GetPosition(1) + direction * (GameManager.Instance.GrowingSpeed * Time.deltaTime);
         lineRenderer.SetPosition(1, target);
     }
 }

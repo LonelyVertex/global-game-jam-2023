@@ -38,7 +38,7 @@ public class EnemySpawner : MonoBehaviour
 
     void SpawnEnemies()
     {
-        for (var i = 0; i < GameManager.Instance.CurrentState; i++)
+        for (var i = 0; i < GameManager.Instance.CurrentStage; i++)
         {
             var position = Random.insideUnitCircle.normalized * _currentRadius;
             Instantiate(enemyPrefab, position, Quaternion.identity);

@@ -4,13 +4,7 @@ using UnityEngine;
 public class Attack : MonoBehaviour
 {
     [SerializeField] int damage;
-    [SerializeField] float radius;
-
-    void OnDrawGizmos()
-    {
-        Gizmos.color = Color.cyan;
-        Gizmos.DrawWireSphere(transform.position, radius);
-    }
+    [SerializeField] CircleCollider2D circleCollider2D;
 
     void Start()
     {
@@ -21,7 +15,7 @@ public class Attack : MonoBehaviour
     void DamageEnemies()
     {
         var enemies = GameObject.FindObjectsOfType<EnemyBehaviour>()
-            .Where(enemy => Vector3.Distance(transform.position, enemy.transform.position) <= radius);
+            .Where(enemy => Vector3.Distance(transform.position, enemy.transform.position) <= circleCollider2D.radius * transform.localScale.x);
 
         foreach (var enemy in enemies)
         {

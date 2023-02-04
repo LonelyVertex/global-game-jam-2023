@@ -5,7 +5,6 @@ public class GameCamera : MonoBehaviour
     [SerializeField] new Camera camera;
     [SerializeField] float baseSize;
     [SerializeField] float stageSize;
-    [SerializeField] float resizeSpeed;
 
     float _desiredSize;
 
@@ -23,6 +22,6 @@ public class GameCamera : MonoBehaviour
 
     void Update()
     {
-        camera.orthographicSize = Mathf.Lerp(camera.orthographicSize, _desiredSize, resizeSpeed * Time.deltaTime);
+        camera.orthographicSize = Mathf.Lerp(camera.orthographicSize, _desiredSize, GameManager.Instance.ResizeSpeed * Time.deltaTime);
     }
 }

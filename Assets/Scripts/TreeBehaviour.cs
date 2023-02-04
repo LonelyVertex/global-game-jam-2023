@@ -6,7 +6,7 @@ public class TreeBehaviour : MonoBehaviour
     [SerializeField] CircleCollider2D circleCollider2D;
 
     public float HealthPctg => (float)_currentHealth / maxHealth;
-    public float Radius => circleCollider2D.radius;
+    public float Radius => circleCollider2D.radius * transform.localScale.x;
 
     int _currentHealth;
 
@@ -23,9 +23,5 @@ public class TreeBehaviour : MonoBehaviour
     void Start()
     {
         _currentHealth = maxHealth;
-    }
-
-    void Update()
-    {
     }
 }
