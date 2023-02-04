@@ -1,5 +1,7 @@
 using System;
+using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -16,10 +18,12 @@ public class GameManager : MonoBehaviour
     [Header("Game References")] [SerializeField]
     TreeBehaviour motherTree;
 
-    [Header("UI References")] [SerializeField]
-    GameObject upgradePanel;
-
+    [Header("UI References")] 
     [SerializeField] Slider motherTreeHealthSlider;
+    [SerializeField] GameObject upgradePanel;
+    [SerializeField] GameObject gameOverPanel;
+    [SerializeField] TMP_Text gameOverStageText;
+
 
     public event Action<int> OnStageChange;
 
@@ -57,6 +61,11 @@ public class GameManager : MonoBehaviour
         }
 
         motherTreeHealthSlider.value = motherTree.HealthPctg;
+
+        if (motherTree.HealthPctg <= 0)
+        {
+            GameOver();
+        }
     }
 
     public void OnUpgrade1Selected()
@@ -79,5 +88,16 @@ public class GameManager : MonoBehaviour
         {
             Destroy(enemy.gameObject);
         }
+    }
+
+    void GameOver()
+    {
+        gameOverPanel.SetActive(true);
+        gameOverStageText.text = $"You made it to stage {_currentStage}!";
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene(0);
     }
 }
