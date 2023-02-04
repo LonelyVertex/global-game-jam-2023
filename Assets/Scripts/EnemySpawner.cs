@@ -8,7 +8,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] float spawnEnemyRate;
 
     float _currentRadius;
-    float _lastEnemySpawned;
+    float _lastEnemiesSpawned;
 
     void OnDrawGizmos()
     {
@@ -25,9 +25,9 @@ public class EnemySpawner : MonoBehaviour
 
     void Update()
     {
-        if (Time.time - _lastEnemySpawned >= spawnEnemyRate)
+        if (Time.time - _lastEnemiesSpawned >= spawnEnemyRate)
         {
-            SpawnEnemy();
+            SpawnEnemies();
         }
     }
 
@@ -36,10 +36,14 @@ public class EnemySpawner : MonoBehaviour
         _currentRadius = baseRadius + (currentState - 1) * stageRadiusIncrement;
     }
 
-    void SpawnEnemy()
+    void SpawnEnemies()
     {
-        var position = Random.insideUnitCircle.normalized * _currentRadius;
-        Instantiate(enemyPrefab, position, Quaternion.identity);
-        _lastEnemySpawned = Time.time;
+        for (var i = 0; i < GameManager.Instance.CurrentState; i++)
+        {
+            var position = Random.insideUnitCircle.normalized * _currentRadius;
+            Instantiate(enemyPrefab, position, Quaternion.identity);
+        }
+
+        _lastEnemiesSpawned = Time.time;
     }
 }

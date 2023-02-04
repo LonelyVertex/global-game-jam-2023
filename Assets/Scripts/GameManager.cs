@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     public float StageProgress => (Time.time - _startTime) / stageTime;
     public float GrowingSpeed => baseGrowingSpeed;
     public float LifeForceGenerateModifier => _lifeForceGenerateModifier;
+    public int CurrentState => _currentStage;
     public float SlowModifier => baseSlow;
     
     float _startTime;
