@@ -2014,7 +2014,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stageTime: 60
-  baseGrowingSpeed: 0.45
+  baseGrowingSpeed: 1
   motherTree: {fileID: 480222600}
   upgradePanel: {fileID: 1130693886}
   motherTreeHealthSlider: {fileID: 697732881}
