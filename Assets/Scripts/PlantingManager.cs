@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class PlantingManager : MonoBehaviour
@@ -7,9 +6,7 @@ public class PlantingManager : MonoBehaviour
 
     [SerializeField] Selection selection;
     [SerializeField] GrowingRoot growingRoot;
-
-    [Header("Prefabs")] [SerializeField] GameObject attackPrefab;
-    [SerializeField] GameObject tree1Prefab;
+    [SerializeField] GameObject growingRootPrefab;
 
     public static PlantingManager Instance { get; private set; }
 
@@ -24,6 +21,8 @@ public class PlantingManager : MonoBehaviour
 
     bool _isPlanting;
     Vector3 _targetPosition;
+    GrowingRoot _currentGrowingRoot;
+    bool _currentGrowingRootRemains;
 
     void Awake()
     {
@@ -33,7 +32,7 @@ public class PlantingManager : MonoBehaviour
     void Start()
     {
         selection.OnSelect += OnSelect;
-        growingRoot.OnReachDestination += OnReachDestination;
+        // growingRoot.OnReachDestination += OnReachDestination;
     }
 
     void Update()
@@ -49,11 +48,12 @@ public class PlantingManager : MonoBehaviour
         _lifeForce += amount;
     }
 
-    public void StartPlanting(GameObject prefab, int cost, float radius)
+    public void StartPlanting(GameObject prefab, int cost, float radius, bool remains)
     {
         _isSelecting = true;
         _currentPrefab = prefab;
         _currentCost = cost;
+        _currentGrowingRootRemains = remains;
         selection.gameObject.SetActive(true);
         selection.SetRadius(radius);
     }
@@ -64,7 +64,11 @@ public class PlantingManager : MonoBehaviour
         _isPlanting = true;
         _targetPosition = position;
         _lifeForce -= _currentCost;
-        growingRoot.SetTarget(position);
+
+        var rootGO = Instantiate(growingRootPrefab, Vector3.zero, Quaternion.identity);
+        _currentGrowingRoot = rootGO.GetComponent<GrowingRoot>();
+        _currentGrowingRoot.OnReachDestination += OnReachDestination;
+        _currentGrowingRoot.SetTarget(position);
     }
 
     void OnReachDestination()
@@ -72,6 +76,12 @@ public class PlantingManager : MonoBehaviour
         _isPlanting = false;
         selection.gameObject.SetActive(false);
         Instantiate(_currentPrefab, _targetPosition, Quaternion.identity);
+        _currentGrowingRoot.OnReachDestination -= OnReachDestination;
+
+        if (!_currentGrowingRootRemains)
+        {
+            Destroy(_currentGrowingRoot.gameObject);
+        }
     }
 
     void CancelSelection()

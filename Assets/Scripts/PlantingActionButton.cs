@@ -7,6 +7,7 @@ public class PlantingActionButton : MonoBehaviour
     [SerializeField] GameObject prefab;
     [SerializeField] int cost;
     [SerializeField] float plantRadius;
+    [SerializeField] bool rootRemains;
     [SerializeField] KeyCode keyCode;
 
     bool _canPlant;
@@ -31,6 +32,6 @@ public class PlantingActionButton : MonoBehaviour
     void StartPlanting()
     {
         if (!IsUsable) return;
-        PlantingManager.Instance.StartPlanting(prefab, cost, plantRadius);
+        PlantingManager.Instance.StartPlanting(prefab, cost, plantRadius, rootRemains);
     }
 }
