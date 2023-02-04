@@ -16,6 +16,17 @@ public class EnemyBehaviour : MonoBehaviour
     float _lastAttack;
     TreeBehaviour _target;
     bool _isInRange;
+    int _slowModifiers;
+
+    public void AddSlowModifier()
+    {
+        _slowModifiers++;
+    }
+
+    public void RemoveSlowModifier()
+    {
+        _slowModifiers = Mathf.Max(0, _slowModifiers - 1);
+    }
 
     public void TakeDamage(int amount)
     {
@@ -94,8 +105,9 @@ public class EnemyBehaviour : MonoBehaviour
     {
         var targetPosition = _target.transform.position;
         var direction = (targetPosition - transform.position).normalized;
+        var movementSpeed = _slowModifiers > 0 ? speed * GameManager.Instance.SlowModifier : speed;
 
         transform.right = direction;
-        transform.Translate(direction * (speed * Time.deltaTime), Space.World);
+        transform.Translate(direction * (movementSpeed * Time.deltaTime), Space.World);
     }
 }

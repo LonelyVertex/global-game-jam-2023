@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     [Header("Game Settings")]
     [SerializeField] float stageTime;
     [SerializeField] float baseGrowingSpeed;
+    [SerializeField] float baseSlow;
 
     [Header("Game References")] 
     [SerializeField] TreeBehaviour motherTree;
@@ -22,6 +23,7 @@ public class GameManager : MonoBehaviour
     public float StageProgress => (Time.time - _startTime) / stageTime;
     public float GrowingSpeed => baseGrowingSpeed;
     public float LifeForceGenerateModifier => _lifeForceGenerateModifier;
+    public float SlowModifier => baseSlow;
     
     float _startTime;
     int _currentStage = 1;
