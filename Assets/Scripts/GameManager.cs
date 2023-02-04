@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -7,8 +8,12 @@ public class GameManager : MonoBehaviour
     [SerializeField] float stageTime;
     [SerializeField] float baseGrowingSpeed;
 
+    [Header("Game References")] 
+    [SerializeField] TreeBehaviour motherTree;
+    
     [Header("UI References")]
     [SerializeField] GameObject upgradePanel;
+    [SerializeField] Slider motherTreeHealthSlider; 
 
     public event Action<int> OnStageChange; 
 
@@ -40,6 +45,8 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 0;
             upgradePanel.SetActive(true);
         }
+
+        motherTreeHealthSlider.value = motherTree.HealthPctg;
     }
 
     public void OnUpgrade1Selected()
