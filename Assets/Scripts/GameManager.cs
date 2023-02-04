@@ -6,17 +6,17 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    [Header("Game Settings")] [SerializeField]
-    float stageTime;
-
+    [Header("Game Settings")]
+    [SerializeField] float stageTime;
+    [SerializeField] float transitionTime;
     [SerializeField] float baseGrowingSpeed;
     [SerializeField] float baseSlow;
 
-    [Header("Other Settings")] [SerializeField]
-    float resizeSpeed;
+    [Header("Other Settings")] 
+    [SerializeField] float resizeSpeed;
 
-    [Header("Game References")] [SerializeField]
-    TreeBehaviour motherTree;
+    [Header("Game References")] 
+    [SerializeField] TreeBehaviour motherTree;
 
     [Header("UI References")] 
     [SerializeField] Slider motherTreeHealthSlider;
@@ -25,7 +25,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] TMP_Text gameOverStageText;
 
 
-    public event Action<int> OnStageChange;
+    public event Action<int> OnBeforeStageChange;
+    public event Action OnAfterStageChange;
 
     public static GameManager Instance { get; private set; }
 
@@ -34,11 +35,15 @@ public class GameManager : MonoBehaviour
     public float LifeForceGenerateModifier => _lifeForceGenerateModifier;
     public int CurrentStage => _currentStage;
     public float SlowModifier => baseSlow;
-    public float ResizeSpeed => resizeSpeed;
+    public bool IsTransitioning => _isTransitioning;
+    public float TransitionProgress => (Time.time - _transitionStartTime) / transitionTime;
 
     float _startTime;
     int _currentStage = 1;
     float _lifeForceGenerateModifier = 1;
+    
+    bool _isTransitioning;
+    float _transitionStartTime;
 
     void Awake()
     {
@@ -55,9 +60,14 @@ public class GameManager : MonoBehaviour
         if (StageProgress > _currentStage)
         {
             _currentStage++;
-            Time.timeScale = 0;
             DestroyEnemies();
-            upgradePanel.SetActive(true);
+            // upgradePanel.SetActive(true);
+
+            _isTransitioning = true;
+            _transitionStartTime = Time.time;
+            
+            Invoke(nameof(StartStage), transitionTime);
+            OnBeforeStageChange?.Invoke(_currentStage);
         }
 
         motherTreeHealthSlider.value = motherTree.HealthPctg;
@@ -67,19 +77,25 @@ public class GameManager : MonoBehaviour
             GameOver();
         }
     }
-
-    public void OnUpgrade1Selected()
+    
+    void StartStage()
     {
-        // ...
-        OnAfterUpgrade();
+        _isTransitioning = false;
+        OnAfterStageChange?.Invoke();
     }
 
-    void OnAfterUpgrade()
-    {
-        Time.timeScale = 1;
-        upgradePanel.SetActive(false);
-        OnStageChange?.Invoke(_currentStage);
-    }
+    // public void OnUpgrade1Selected()
+    // {
+    //     // ...
+    //     OnAfterUpgrade();
+    // }
+
+    // void OnAfterUpgrade()
+    // {
+    //     Time.timeScale = 1;
+    //     upgradePanel.SetActive(false);
+    //     OnStageChange?.Invoke(_currentStage);
+    // }
 
     void DestroyEnemies()
     {

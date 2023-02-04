@@ -20,18 +20,18 @@ public class EnemySpawner : MonoBehaviour
     {
         _currentRadius = baseRadius;
 
-        GameManager.Instance.OnStageChange += OnStageChanged;
+        GameManager.Instance.OnBeforeStageChange += OnBeforeStageChanged;
     }
 
     void Update()
     {
-        if (Time.time - _lastEnemiesSpawned >= spawnEnemyRate)
+        if (!GameManager.Instance.IsTransitioning && Time.time - _lastEnemiesSpawned >= spawnEnemyRate)
         {
             SpawnEnemies();
         }
     }
 
-    void OnStageChanged(int currentState)
+    void OnBeforeStageChanged(int currentState)
     {
         _currentRadius = baseRadius + (currentState - 1) * stageRadiusIncrement;
     }

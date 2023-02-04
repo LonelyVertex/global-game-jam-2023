@@ -6,22 +6,29 @@ public class GameCamera : MonoBehaviour
     [SerializeField] float baseSize;
     [SerializeField] float stageSize;
 
+    float _currentSize;
     float _desiredSize;
 
     void Start()
     {
+        _currentSize = baseSize;
         _desiredSize = baseSize;
 
-        GameManager.Instance.OnStageChange += OnStageChange;
+        GameManager.Instance.OnBeforeStageChange += OnBeforeStageChange;
     }
 
-    void OnStageChange(int stage)
+    void OnBeforeStageChange(int stage)
     {
+        _currentSize = _desiredSize;
         _desiredSize = baseSize + (stage - 1) * stageSize;
     }
 
     void Update()
     {
-        camera.orthographicSize = Mathf.Lerp(camera.orthographicSize, _desiredSize, GameManager.Instance.ResizeSpeed * Time.deltaTime);
+        if (GameManager.Instance.IsTransitioning)
+        {
+            camera.orthographicSize = Mathf.Lerp(_currentSize, _desiredSize,
+                GameManager.Instance.TransitionProgress);
+        }
     }
 }

@@ -16,8 +16,10 @@ public class MotherTreeStageResizer : StageResizer
     {
         base.Update();
 
-        if (IsResized()) return;
-        DevourTrees();
+        if (GameManager.Instance.IsTransitioning)
+        {
+            DevourTrees();
+        }
     }
 
     void DevourTrees()

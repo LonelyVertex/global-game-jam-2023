@@ -12,7 +12,7 @@ public class PlantingManager : MonoBehaviour
     public static PlantingManager Instance { get; private set; }
 
     public int LifeForce => _lifeForce;
-    public bool IsPlanting => _isPlanting;
+    public bool CanPlant => !_isDisabled && !_isPlanting;
 
     int _lifeForce = 100;
 
@@ -25,6 +25,8 @@ public class PlantingManager : MonoBehaviour
     GrowingRoot _currentGrowingRoot;
     bool _currentGrowingRootRemains;
 
+    bool _isDisabled;
+
     void Awake()
     {
         Instance = this;
@@ -33,7 +35,20 @@ public class PlantingManager : MonoBehaviour
     void Start()
     {
         selection.OnSelect += OnSelect;
-        // growingRoot.OnReachDestination += OnReachDestination;
+
+        GameManager.Instance.OnBeforeStageChange += OnBeforeStageChange;
+        GameManager.Instance.OnAfterStageChange += OnAfterStageChange;
+    }
+
+    void OnBeforeStageChange(int stage)
+    {
+        CancelSelection();
+        _isDisabled = true;
+    }
+
+    void OnAfterStageChange()
+    {
+        _isDisabled = false;
     }
 
     void Update()
@@ -90,10 +105,11 @@ public class PlantingManager : MonoBehaviour
     {
         _isPlanting = false;
         selection.gameObject.SetActive(false);
-        
+
         var plantedGO = Instantiate(_currentPrefab, _targetPosition, Quaternion.Euler(0, 0, Random.Range(0, 360)));
-        plantedGO.transform.localScale = new Vector3(GameManager.Instance.CurrentStage, GameManager.Instance.CurrentStage, 1);
-        
+        plantedGO.transform.localScale =
+            new Vector3(GameManager.Instance.CurrentStage, GameManager.Instance.CurrentStage, 1);
+
         _currentGrowingRoot.OnReachDestination -= OnReachDestination;
         if (!_currentGrowingRootRemains)
         {

@@ -31,7 +31,7 @@ public class Selection : MonoBehaviour
 
     void Update()
     {
-        if (PlantingManager.Instance.IsPlanting) return;
+        if (!PlantingManager.Instance.CanPlant) return;
 
         var worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         transform.position = new Vector3(worldPosition.x, worldPosition.y, transform.position.z);

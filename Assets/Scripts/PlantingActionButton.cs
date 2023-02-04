@@ -13,7 +13,7 @@ public class PlantingActionButton : MonoBehaviour
 
     bool _canPlant;
 
-    bool IsUsable => !PlantingManager.Instance.IsPlanting && cost <= PlantingManager.Instance.LifeForce;
+    bool IsUsable => PlantingManager.Instance.CanPlant  && cost <= PlantingManager.Instance.LifeForce;
 
     void Start()
     {
