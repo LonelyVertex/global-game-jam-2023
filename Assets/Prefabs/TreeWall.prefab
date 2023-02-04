@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 45cb36e2dceec4d4ba407bdee6b6441c, type: 3}
-  m_Color: {r: 0.5803922, g: 1, b: 0, a: 1}
+  m_Color: {r: 0.8201594, g: 0.8490566, b: 0.5486828, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 5386526179203569298}
   - component: {fileID: 8371136326479144747}
   m_Layer: 6
-  m_Name: Tree1
+  m_Name: TreeWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -146,5 +146,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aca392dfe964240c88677e47ee27eac9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 500
   circleCollider2D: {fileID: 5386526179203569298}
