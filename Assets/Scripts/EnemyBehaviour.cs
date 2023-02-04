@@ -11,6 +11,7 @@ public class EnemyBehaviour : MonoBehaviour
     [SerializeField] int damage;
     [SerializeField] float attackCooldown;
     [SerializeField] float radius;
+    [SerializeField] Animator _animator;
 
     int _currentHealth;
     float _lastAttack;
@@ -54,6 +55,8 @@ public class EnemyBehaviour : MonoBehaviour
         CheckIsInRange();
         SearchTarget();
 
+        _animator.SetBool("Attacking", false);
+        
         if (!_target) return;
         if (_isInRange)
         {
@@ -99,6 +102,8 @@ public class EnemyBehaviour : MonoBehaviour
             _target.TakeDamage(damage);
             _lastAttack = Time.time;
         }
+        
+        _animator.SetBool("Attacking", true);
     }
 
     void Walk()
@@ -109,5 +114,7 @@ public class EnemyBehaviour : MonoBehaviour
 
         transform.right = direction;
         transform.Translate(direction * (movementSpeed * Time.deltaTime), Space.World);
+        
+        _animator.SetFloat("Speed", movementSpeed);
     }
 }

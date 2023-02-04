@@ -53,6 +53,7 @@ MonoBehaviour:
   damage: 10
   attackCooldown: 0.5
   radius: 0.8
+  _animator: {fileID: 6749040371600188023}
 --- !u!50 &2136817900
 Rigidbody2D:
   serializedVersion: 4
@@ -186,6 +187,18 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9047347565812015233, guid: 1b500e662046b24408e85ba7d9702b94, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9047347565812015233, guid: 1b500e662046b24408e85ba7d9702b94, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9047347565812015233, guid: 1b500e662046b24408e85ba7d9702b94, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9047347565812015233, guid: 1b500e662046b24408e85ba7d9702b94, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -199,7 +212,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9047347565812015233, guid: 1b500e662046b24408e85ba7d9702b94, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 9047347565812015233, guid: 1b500e662046b24408e85ba7d9702b94, type: 3}
       propertyPath: m_LocalRotation.x
@@ -211,7 +224,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9047347565812015233, guid: 1b500e662046b24408e85ba7d9702b94, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 9047347565812015233, guid: 1b500e662046b24408e85ba7d9702b94, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -223,7 +236,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9047347565812015233, guid: 1b500e662046b24408e85ba7d9702b94, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 9047347565812015238, guid: 1b500e662046b24408e85ba7d9702b94, type: 3}
       propertyPath: m_Name
@@ -234,5 +247,10 @@ PrefabInstance:
 --- !u!4 &2029348733556617648 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9047347565812015233, guid: 1b500e662046b24408e85ba7d9702b94, type: 3}
+  m_PrefabInstance: {fileID: 7036614137626988849}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &6749040371600188023 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4327531751145501510, guid: 1b500e662046b24408e85ba7d9702b94, type: 3}
   m_PrefabInstance: {fileID: 7036614137626988849}
   m_PrefabAsset: {fileID: 0}
