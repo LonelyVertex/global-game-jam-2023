@@ -19,6 +19,11 @@ public class TreeBehaviour : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    public void TakeHealing(int amount)
+    {
+        _currentHealth = Mathf.Min(maxHealth, _currentHealth + amount);
+    }
     
     void Start()
     {
