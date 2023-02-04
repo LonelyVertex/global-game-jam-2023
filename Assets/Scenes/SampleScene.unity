@@ -635,10 +635,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52a982518e3d24ab8ac44e0851c387c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _camera: {fileID: 963194227}
-  _baseSize: 27
-  _stageSize: 24
-  _resizeSpeed: 5
+  camera: {fileID: 963194227}
+  baseSize: 27
+  stageSize: 24
+  resizeSpeed: 5
 --- !u!1 &1130693886
 GameObject:
   m_ObjectHideFlags: 0
@@ -1082,8 +1082,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e937bfbbd26049e1ba9ef7c6598cb8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _minSize: 0.6
-  _stageSize: 5
+  minSize: 0.6
+  stageSize: 5
 --- !u!1 &1513599364
 GameObject:
   m_ObjectHideFlags: 0
@@ -1314,9 +1314,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1357dbc497fd042cf9a03bc989529a5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _stageTime: 60
-  _baseGrowingSpeed: 0.36
-  _upgradePanel: {fileID: 1130693886}
+  stageTime: 60
+  baseGrowingSpeed: 0.45
+  upgradePanel: {fileID: 1130693886}
 --- !u!4 &1668730417
 Transform:
   m_ObjectHideFlags: 0
@@ -1344,8 +1344,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e59e2750e3b8d42eeb204e57ae5dd1ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _selection: {fileID: 1999316987}
-  _growingRoot: {fileID: 2081327024}
+  selection: {fileID: 1999316987}
+  growingRoot: {fileID: 2081327024}
+  attackPrefab: {fileID: 8952509624734600249, guid: 744fba2258ed84c2f97306d10f16a4f6, type: 3}
+  tree1Prefab: {fileID: 3992032575905870592, guid: a2096a2a386564891a4a2db8b9eaeb8b, type: 3}
 --- !u!1 &1771657497
 GameObject:
   m_ObjectHideFlags: 0
@@ -1996,7 +1998,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 226fcbe9dab1844fdaa4bc4665737442, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _lineRenderer: {fileID: 2081327025}
+  lineRenderer: {fileID: 2081327025}
 --- !u!120 &2081327025
 LineRenderer:
   m_ObjectHideFlags: 0

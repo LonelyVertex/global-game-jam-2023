@@ -2,27 +2,27 @@ using UnityEngine;
 
 public class GameCamera : MonoBehaviour
 {
-    [SerializeField] Camera _camera;
-    [SerializeField] float _baseSize;
-    [SerializeField] float _stageSize;
-    [SerializeField] float _resizeSpeed;
+    [SerializeField] new Camera camera;
+    [SerializeField] float baseSize;
+    [SerializeField] float stageSize;
+    [SerializeField] float resizeSpeed;
 
     float _desiredSize;
 
     void Start()
     {
-        _desiredSize = _baseSize;
+        _desiredSize = baseSize;
 
         GameManager.Instance.OnStageChange += OnStageChange;
     }
 
     void OnStageChange(int stage)
     {
-        _desiredSize = _baseSize + (stage - 1) * _stageSize;
+        _desiredSize = baseSize + (stage - 1) * stageSize;
     }
 
     void Update()
     {
-        _camera.orthographicSize = Mathf.Lerp(_camera.orthographicSize, _desiredSize, _resizeSpeed * Time.deltaTime);
+        camera.orthographicSize = Mathf.Lerp(camera.orthographicSize, _desiredSize, resizeSpeed * Time.deltaTime);
     }
 }

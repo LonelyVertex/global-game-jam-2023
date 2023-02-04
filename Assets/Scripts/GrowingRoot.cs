@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class GrowingRoot : MonoBehaviour
 {
-    [SerializeField] LineRenderer _lineRenderer;
+    [SerializeField] LineRenderer lineRenderer;
 
     public Action OnReachDestination;
     
@@ -13,7 +13,6 @@ public class GrowingRoot : MonoBehaviour
 
     bool _isGrowing;
 
-    // Start is called before the first frame update
     void Start()
     {
         _startPosition = transform.position;
@@ -22,18 +21,17 @@ public class GrowingRoot : MonoBehaviour
     public void SetTarget(Vector3 target)
     {
         _targetPosition = target;
-        _lineRenderer.SetPosition(1, _startPosition);
+        lineRenderer.SetPosition(1, _startPosition);
         _distance = Vector3.Distance(_startPosition, _targetPosition);
         _isGrowing = true;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (!_isGrowing) return;
 
 
-        var currentPosition = _lineRenderer.GetPosition(1);
+        var currentPosition = lineRenderer.GetPosition(1);
 
         if (Vector3.Distance(_startPosition, currentPosition) >= _distance)
         {
@@ -43,7 +41,7 @@ public class GrowingRoot : MonoBehaviour
         }
 
         var direction = _targetPosition - _startPosition;
-        var target = _lineRenderer.GetPosition(1) + direction * GameManager.Instance.GrowingSpeed * Time.deltaTime;
-        _lineRenderer.SetPosition(1, target);
+        var target = lineRenderer.GetPosition(1) + direction * GameManager.Instance.GrowingSpeed * Time.deltaTime;
+        lineRenderer.SetPosition(1, target);
     }
 }

@@ -4,18 +4,18 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     [Header("Game Settings")]
-    [SerializeField] float _stageTime;
-    [SerializeField] float _baseGrowingSpeed;
+    [SerializeField] float stageTime;
+    [SerializeField] float baseGrowingSpeed;
 
     [Header("UI References")]
-    [SerializeField] GameObject _upgradePanel;
+    [SerializeField] GameObject upgradePanel;
 
     public event Action<int> OnStageChange; 
 
     public static GameManager Instance { get; private set; }
 
-    public float StageProgress => (Time.time - _startTime) / _stageTime;
-    public float GrowingSpeed => _baseGrowingSpeed;
+    public float StageProgress => (Time.time - _startTime) / stageTime;
+    public float GrowingSpeed => baseGrowingSpeed;
     
     float _startTime;
     int _currentStage = 1;
@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
         {
             _currentStage++;
             Time.timeScale = 0;
-            _upgradePanel.SetActive(true);
+            upgradePanel.SetActive(true);
         }
     }
 
@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
     void OnAfterUpgrade()
     {
         Time.timeScale = 1;
-        _upgradePanel.SetActive(false);
+        upgradePanel.SetActive(false);
         OnStageChange?.Invoke(_currentStage);
     }
 }

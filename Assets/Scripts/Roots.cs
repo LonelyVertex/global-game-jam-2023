@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class Roots : MonoBehaviour
 {
-    [SerializeField] float _minSize;
-    [SerializeField] float _stageSize;
+    [SerializeField] float minSize;
+    [SerializeField] float stageSize;
 
     void Update()
     {
-        var scale = Mathf.LerpUnclamped(_minSize, _stageSize, GameManager.Instance.StageProgress);
+        var scale = Mathf.LerpUnclamped(minSize, stageSize, GameManager.Instance.StageProgress);
         SetScale(scale);
     }
 
