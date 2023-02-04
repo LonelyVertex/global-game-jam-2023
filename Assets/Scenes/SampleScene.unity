@@ -2314,7 +2314,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -10
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 45cb36e2dceec4d4ba407bdee6b6441c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.09411765}
   m_FlipX: 0
@@ -3297,7 +3297,7 @@ MonoBehaviour:
   prefab: {fileID: 3992032575905870592, guid: 7200c40959a02479c8533bd737f13689, type: 3}
   cost: 20
   plantRadius: 6.5
-  rootRemains: 1
+  rootRemains: 0
   keyCode: 52
 --- !u!114 &1937961581
 MonoBehaviour:

@@ -82,14 +82,14 @@ public class PlantingManager : MonoBehaviour
             })
             .FirstOrDefault();
 
-        return closest ? closest.transform.position : Vector3.zero;
+        return closest != null ? closest.transform.position : Vector3.zero;
     }
 
     void OnReachDestination()
     {
         _isPlanting = false;
         selection.gameObject.SetActive(false);
-        Instantiate(_currentPrefab, _targetPosition, Quaternion.identity);
+        Instantiate(_currentPrefab, _targetPosition, Quaternion.Euler(0, 0, Random.Range(0, 360)));
         _currentGrowingRoot.OnReachDestination -= OnReachDestination;
 
         if (!_currentGrowingRootRemains)
