@@ -390,11 +390,11 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicSpriteImportData.Array.size
-    value: 5
+    value: 8
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicSpriteImportData.Array.data[0].m_Name
-    value: Vector layer
+    value: TopLeves2
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicSpriteImportData.Array.data[0].m_OriginalName
@@ -430,23 +430,23 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicSpriteImportData.Array.data[0].m_Rect.x
-    value: 4108
+    value: 798
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicSpriteImportData.Array.data[0].m_Rect.y
-    value: 4296
+    value: 2637
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicSpriteImportData.Array.data[0].m_Rect.width
-    value: 2674
+    value: 421
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicSpriteImportData.Array.data[0].m_Rect.height
-    value: 1689
+    value: 633
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicSpriteImportData.Array.data[0].m_SpriteID
-    value: 749d7f217aa4798419378f3c7da49b95
+    value: 62330dea1a952d840850982cc6fb2534
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicSpriteImportData.Array.data[0].spriteBone.Array.size
@@ -482,23 +482,23 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicSpriteImportData.Array.data[0].uvTransform.x
-    value: 4108
+    value: 798
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicSpriteImportData.Array.data[0].uvTransform.y
-    value: 4296
+    value: 2637
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicSpriteImportData.Array.data[0].spritePosition.x
-    value: 807
+    value: 1753
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicSpriteImportData.Array.data[0].spritePosition.y
-    value: 1087
+    value: 1464
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicSpriteImportData.Array.data[1].m_Name
-    value: Vector layer
+    value: TopLeaves1
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicSpriteImportData.Array.data[1].m_OriginalName
@@ -534,23 +534,23 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicSpriteImportData.Array.data[1].m_Rect.x
-    value: 4
+    value: 1034
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicSpriteImportData.Array.data[1].m_Rect.y
-    value: 4108
+    value: 897
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicSpriteImportData.Array.data[1].m_Rect.width
-    value: 2411
+    value: 618
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicSpriteImportData.Array.data[1].m_Rect.height
-    value: 2410
+    value: 819
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicSpriteImportData.Array.data[1].m_SpriteID
-    value: 69224a939e99cf24aa4ab821d507c8b0
+    value: e600220d78e813e45b7cb60a31a84e15
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicSpriteImportData.Array.data[1].spriteBone.Array.size
@@ -586,23 +586,23 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicSpriteImportData.Array.data[1].uvTransform.x
-    value: 4
+    value: 1034
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicSpriteImportData.Array.data[1].uvTransform.y
-    value: 4108
+    value: 897
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicSpriteImportData.Array.data[1].spritePosition.x
-    value: 937
+    value: 1685
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicSpriteImportData.Array.data[1].spritePosition.y
-    value: 720
+    value: 1334
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicSpriteImportData.Array.data[2].m_Name
-    value: Vector layer
+    value: MiddleLeaves2
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicSpriteImportData.Array.data[2].m_OriginalName
@@ -638,23 +638,23 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicSpriteImportData.Array.data[2].m_Rect.x
-    value: 4108
+    value: 4
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicSpriteImportData.Array.data[2].m_Rect.y
-    value: 2223
+    value: 2637
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicSpriteImportData.Array.data[2].m_Rect.width
-    value: 2398
+    value: 786
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicSpriteImportData.Array.data[2].m_Rect.height
-    value: 2065
+    value: 1020
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicSpriteImportData.Array.data[2].m_SpriteID
-    value: 6aff1fe50e5b34149a43bf7036a98ec4
+    value: 8578af5cc8e29a54d835e6637234ab76
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicSpriteImportData.Array.data[2].spriteBone.Array.size
@@ -690,23 +690,23 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicSpriteImportData.Array.data[2].uvTransform.x
-    value: 4108
+    value: 4
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicSpriteImportData.Array.data[2].uvTransform.y
-    value: 2223
+    value: 2637
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicSpriteImportData.Array.data[2].spritePosition.x
-    value: 962
+    value: 1475
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicSpriteImportData.Array.data[2].spritePosition.y
-    value: 912
+    value: 1313
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicSpriteImportData.Array.data[3].m_Name
-    value: Vector layer
+    value: MiddleLeaves1
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicSpriteImportData.Array.data[3].m_OriginalName
@@ -742,23 +742,23 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicSpriteImportData.Array.data[3].m_Rect.x
-    value: 4108
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_MosaicSpriteImportData.Array.data[3].m_Rect.y
     value: 4
     objectReference: {fileID: 0}
   - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[3].m_Rect.y
+    value: 1800
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
     propertyPath: m_MosaicSpriteImportData.Array.data[3].m_Rect.width
-    value: 2487
+    value: 1057
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicSpriteImportData.Array.data[3].m_Rect.height
-    value: 2211
+    value: 829
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicSpriteImportData.Array.data[3].m_SpriteID
-    value: 2829835de0828374fb5f606ffe7b6d3c
+    value: 96827436c6510904197460dc61702cd2
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicSpriteImportData.Array.data[3].spriteBone.Array.size
@@ -794,23 +794,23 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicSpriteImportData.Array.data[3].uvTransform.x
-    value: 4108
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_MosaicSpriteImportData.Array.data[3].uvTransform.y
     value: 4
     objectReference: {fileID: 0}
   - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[3].uvTransform.y
+    value: 1800
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
     propertyPath: m_MosaicSpriteImportData.Array.data[3].spritePosition.x
-    value: 940
+    value: 1507
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicSpriteImportData.Array.data[3].spritePosition.y
-    value: 770
+    value: 1430
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicSpriteImportData.Array.data[4].m_Name
-    value: Vector layer
+    value: Trunk2
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicSpriteImportData.Array.data[4].m_OriginalName
@@ -850,19 +850,19 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicSpriteImportData.Array.data[4].m_Rect.y
-    value: 4
+    value: 897
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicSpriteImportData.Array.data[4].m_Rect.width
-    value: 4096
+    value: 2487
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicSpriteImportData.Array.data[4].m_Rect.height
-    value: 4096
+    value: 2211
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicSpriteImportData.Array.data[4].m_SpriteID
-    value: adbdeede78bbe3640b95b9fd26132a22
+    value: 2829835de0828374fb5f606ffe7b6d3c
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicSpriteImportData.Array.data[4].spriteBone.Array.size
@@ -902,15 +902,327 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicSpriteImportData.Array.data[4].uvTransform.y
-    value: 4
+    value: 897
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicSpriteImportData.Array.data[4].spritePosition.x
-    value: 0
+    value: 1479
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicSpriteImportData.Array.data[4].spritePosition.y
+    value: 1453
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[5].m_Name
+    value: BottomLeaves2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[5].m_OriginalName
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[5].m_Pivot.x
+    value: 0.5
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[5].m_Pivot.y
+    value: 0.5
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[5].m_Alignment
     value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[5].m_Border.x
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[5].m_Border.y
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[5].m_Border.z
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[5].m_Border.w
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[5].m_Rect.x
+    value: 4
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[5].m_Rect.y
+    value: 4
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[5].m_Rect.width
+    value: 2674
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[5].m_Rect.height
+    value: 1689
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[5].m_SpriteID
+    value: 749d7f217aa4798419378f3c7da49b95
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[5].spriteBone.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[5].spriteOutline.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[5].vertices.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[5].spritePhysicsOutline.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[5].indices.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[5].edges.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[5].tessellationDetail
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[5].parentGroupIndex
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[5].uvTransform.x
+    value: 4
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[5].uvTransform.y
+    value: 4
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[5].spritePosition.x
+    value: 1394
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[5].spritePosition.y
+    value: 1503
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[6].m_Name
+    value: Trunk1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[6].m_OriginalName
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[6].m_Pivot.x
+    value: 0.5
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[6].m_Pivot.y
+    value: 0.5
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[6].m_Alignment
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[6].m_Border.x
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[6].m_Border.y
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[6].m_Border.z
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[6].m_Border.w
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[6].m_Rect.x
+    value: 1069
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[6].m_Rect.y
+    value: 1800
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[6].m_Rect.width
+    value: 2398
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[6].m_Rect.height
+    value: 2065
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[6].m_SpriteID
+    value: 6aff1fe50e5b34149a43bf7036a98ec4
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[6].spriteBone.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[6].spriteOutline.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[6].vertices.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[6].spritePhysicsOutline.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[6].indices.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[6].edges.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[6].tessellationDetail
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[6].parentGroupIndex
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[6].uvTransform.x
+    value: 1069
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[6].uvTransform.y
+    value: 1800
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[6].spritePosition.x
+    value: 1545
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[6].spritePosition.y
+    value: 1422
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[7].m_Name
+    value: BottomLeaves1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[7].m_OriginalName
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[7].m_Pivot.x
+    value: 0.5
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[7].m_Pivot.y
+    value: 0.5
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[7].m_Alignment
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[7].m_Border.x
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[7].m_Border.y
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[7].m_Border.z
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[7].m_Border.w
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[7].m_Rect.x
+    value: 1114
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[7].m_Rect.y
+    value: 4
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[7].m_Rect.width
+    value: 4096
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[7].m_Rect.height
+    value: 4096
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[7].m_SpriteID
+    value: adbdeede78bbe3640b95b9fd26132a22
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[7].spriteBone.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[7].spriteOutline.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[7].vertices.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[7].spritePhysicsOutline.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[7].indices.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[7].edges.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[7].tessellationDetail
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[7].parentGroupIndex
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[7].uvTransform.x
+    value: 1114
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[7].uvTransform.y
+    value: 4
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[7].spritePosition.x
+    value: 1487
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicSpriteImportData.Array.data[7].spritePosition.y
+    value: 1416
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_RigSpriteImportData.Array.size
@@ -1726,15 +2038,15 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicPSDLayers.Array.size
-    value: 5
+    value: 8
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicPSDLayers.Array.data[0].m_Name
-    value: Vector layer
+    value: TopLeves2
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicPSDLayers.Array.data[0].m_SpriteName
-    value: Vector layer
+    value: TopLeves2
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicPSDLayers.Array.data[0].m_IsGroup
@@ -1746,19 +2058,19 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicPSDLayers.Array.data[0].m_SpriteID
-    value: 749d7f217aa4798419378f3c7da49b95
+    value: 62330dea1a952d840850982cc6fb2534
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicPSDLayers.Array.data[0].m_LayerID
-    value: 12
+    value: 17
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicPSDLayers.Array.data[0].m_MosaicPosition.x
-    value: 4108
+    value: 798
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicPSDLayers.Array.data[0].m_MosaicPosition.y
-    value: 4296
+    value: 2637
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicPSDLayers.Array.data[0].m_Flatten
@@ -1774,11 +2086,11 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicPSDLayers.Array.data[1].m_Name
-    value: Vector layer
+    value: TopLeaves1
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicPSDLayers.Array.data[1].m_SpriteName
-    value: Vector layer
+    value: TopLeaves1
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicPSDLayers.Array.data[1].m_IsGroup
@@ -1790,19 +2102,19 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicPSDLayers.Array.data[1].m_SpriteID
-    value: 69224a939e99cf24aa4ab821d507c8b0
+    value: e600220d78e813e45b7cb60a31a84e15
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicPSDLayers.Array.data[1].m_LayerID
-    value: 11
+    value: 16
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicPSDLayers.Array.data[1].m_MosaicPosition.x
-    value: 4
+    value: 1034
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicPSDLayers.Array.data[1].m_MosaicPosition.y
-    value: 4108
+    value: 897
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicPSDLayers.Array.data[1].m_Flatten
@@ -1818,11 +2130,11 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicPSDLayers.Array.data[2].m_Name
-    value: Vector layer
+    value: MiddleLeaves2
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicPSDLayers.Array.data[2].m_SpriteName
-    value: Vector layer
+    value: MiddleLeaves2
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicPSDLayers.Array.data[2].m_IsGroup
@@ -1834,19 +2146,19 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicPSDLayers.Array.data[2].m_SpriteID
-    value: 6aff1fe50e5b34149a43bf7036a98ec4
+    value: 8578af5cc8e29a54d835e6637234ab76
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicPSDLayers.Array.data[2].m_LayerID
-    value: 7
+    value: 15
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicPSDLayers.Array.data[2].m_MosaicPosition.x
-    value: 4108
+    value: 4
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicPSDLayers.Array.data[2].m_MosaicPosition.y
-    value: 2223
+    value: 2637
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicPSDLayers.Array.data[2].m_Flatten
@@ -1862,11 +2174,11 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicPSDLayers.Array.data[3].m_Name
-    value: Vector layer
+    value: MiddleLeaves1
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicPSDLayers.Array.data[3].m_SpriteName
-    value: Vector layer
+    value: MiddleLeaves1
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicPSDLayers.Array.data[3].m_IsGroup
@@ -1878,19 +2190,19 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicPSDLayers.Array.data[3].m_SpriteID
-    value: 2829835de0828374fb5f606ffe7b6d3c
+    value: 96827436c6510904197460dc61702cd2
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicPSDLayers.Array.data[3].m_LayerID
-    value: 13
+    value: 14
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicPSDLayers.Array.data[3].m_MosaicPosition.x
-    value: 4108
+    value: 4
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicPSDLayers.Array.data[3].m_MosaicPosition.y
-    value: 4
+    value: 1800
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicPSDLayers.Array.data[3].m_Flatten
@@ -1906,11 +2218,11 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicPSDLayers.Array.data[4].m_Name
-    value: Vector layer
+    value: Trunk2
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicPSDLayers.Array.data[4].m_SpriteName
-    value: Vector layer
+    value: Trunk2
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicPSDLayers.Array.data[4].m_IsGroup
@@ -1922,11 +2234,11 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicPSDLayers.Array.data[4].m_SpriteID
-    value: adbdeede78bbe3640b95b9fd26132a22
+    value: 2829835de0828374fb5f606ffe7b6d3c
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicPSDLayers.Array.data[4].m_LayerID
-    value: 6
+    value: 13
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicPSDLayers.Array.data[4].m_MosaicPosition.x
@@ -1934,7 +2246,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicPSDLayers.Array.data[4].m_MosaicPosition.y
-    value: 4
+    value: 897
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicPSDLayers.Array.data[4].m_Flatten
@@ -1946,6 +2258,138 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MosaicPSDLayers.Array.data[4].m_IsVisible
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicPSDLayers.Array.data[5].m_Name
+    value: BottomLeaves2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicPSDLayers.Array.data[5].m_SpriteName
+    value: BottomLeaves2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicPSDLayers.Array.data[5].m_IsGroup
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicPSDLayers.Array.data[5].m_ParentIndex
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicPSDLayers.Array.data[5].m_SpriteID
+    value: 749d7f217aa4798419378f3c7da49b95
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicPSDLayers.Array.data[5].m_LayerID
+    value: 12
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicPSDLayers.Array.data[5].m_MosaicPosition.x
+    value: 4
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicPSDLayers.Array.data[5].m_MosaicPosition.y
+    value: 4
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicPSDLayers.Array.data[5].m_Flatten
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicPSDLayers.Array.data[5].m_IsImported
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicPSDLayers.Array.data[5].m_IsVisible
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicPSDLayers.Array.data[6].m_Name
+    value: Trunk1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicPSDLayers.Array.data[6].m_SpriteName
+    value: Trunk1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicPSDLayers.Array.data[6].m_IsGroup
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicPSDLayers.Array.data[6].m_ParentIndex
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicPSDLayers.Array.data[6].m_SpriteID
+    value: 6aff1fe50e5b34149a43bf7036a98ec4
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicPSDLayers.Array.data[6].m_LayerID
+    value: 7
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicPSDLayers.Array.data[6].m_MosaicPosition.x
+    value: 1069
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicPSDLayers.Array.data[6].m_MosaicPosition.y
+    value: 1800
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicPSDLayers.Array.data[6].m_Flatten
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicPSDLayers.Array.data[6].m_IsImported
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicPSDLayers.Array.data[6].m_IsVisible
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicPSDLayers.Array.data[7].m_Name
+    value: BottomLeaves1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicPSDLayers.Array.data[7].m_SpriteName
+    value: BottomLeaves1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicPSDLayers.Array.data[7].m_IsGroup
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicPSDLayers.Array.data[7].m_ParentIndex
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicPSDLayers.Array.data[7].m_SpriteID
+    value: adbdeede78bbe3640b95b9fd26132a22
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicPSDLayers.Array.data[7].m_LayerID
+    value: 6
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicPSDLayers.Array.data[7].m_MosaicPosition.x
+    value: 1114
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicPSDLayers.Array.data[7].m_MosaicPosition.y
+    value: 4
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicPSDLayers.Array.data[7].m_Flatten
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicPSDLayers.Array.data[7].m_IsImported
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MosaicPSDLayers.Array.data[7].m_IsVisible
     value: 1
     objectReference: {fileID: 0}
   - target: {fileID: 0}
