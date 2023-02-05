@@ -39,7 +39,7 @@ public class EnemySpawner : MonoBehaviour
 
     void SpawnEnemies()
     {
-        for (var i = 0; i < 2 * GameManager.Instance.CurrentStage; i++)
+        for (var i = 0; i < GameManager.Instance.CurrentStage; i++)
         {
             var position = Random.insideUnitCircle.normalized * _currentRadius;
             Instantiate(ChoosePrefab(), position, Quaternion.identity);
@@ -50,7 +50,7 @@ public class EnemySpawner : MonoBehaviour
 
     GameObject ChoosePrefab()
     {
-        var bulldozerChance = (GameManager.Instance.CurrentStage - 1) / 7f;
+        var bulldozerChance = (GameManager.Instance.CurrentStage - 1) / 20f;
         return Random.value < bulldozerChance ? bulldozerPrefab : lumberjackPrefab;
     }
 }
