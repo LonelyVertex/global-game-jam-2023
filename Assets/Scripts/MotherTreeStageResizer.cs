@@ -1,10 +1,13 @@
 using System.Linq;
 using UnityEngine;
 
-public class MotherTreeStageResizer : StageResizer
+public class MotherTreeStageResizer : MonoBehaviour
 {
     [SerializeField] LifeForceGenerator lifeForceGenerator;
     [SerializeField] CircleCollider2D circleCollider2D;
+
+    float _currentScale;
+    float _desiredScale;
 
     void OnDrawGizmos()
     {
@@ -12,12 +15,27 @@ public class MotherTreeStageResizer : StageResizer
         Gizmos.DrawWireSphere(transform.position, circleCollider2D.radius * transform.localScale.x);
     }
 
-    protected override void Update()
+    void Start()
     {
-        base.Update();
+        _currentScale = 1;
+        _desiredScale = 1;
 
+        GameManager.Instance.OnBeforeStageChange += OnBeforeStageChange;
+    }
+
+    void OnBeforeStageChange(int stage)
+    {
+        _currentScale = _desiredScale;
+        _desiredScale = stage;
+    }
+
+    void Update()
+    {
         if (GameManager.Instance.IsTransitioning)
         {
+            var scale = Mathf.Lerp(_currentScale, _desiredScale, GameManager.Instance.TransitionProgress);
+            transform.localScale = new Vector3(scale, scale, 1);
+
             DevourTrees();
         }
     }
@@ -25,13 +43,13 @@ public class MotherTreeStageResizer : StageResizer
     void DevourTrees()
     {
         var trees = FindObjectsOfType<TreeBehaviour>()
-            .Where(tree => Vector3.Distance(tree.transform.position, transform.position) <= circleCollider2D.radius * transform.localScale.x);
-            
+            .Where(tree => Vector3.Distance(tree.transform.position, transform.position) <=
+                           circleCollider2D.radius * transform.localScale.x);
+
         foreach (var tree in trees)
         {
             if (tree.gameObject != gameObject)
             {
-
                 var treeLifeForceGenerator = tree.GetComponent<LifeForceGenerator>();
                 if (treeLifeForceGenerator)
                 {
