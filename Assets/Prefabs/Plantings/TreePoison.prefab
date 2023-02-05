@@ -179,7 +179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 3792671693474319667}
-  duration: 2
+  duration: 1
 --- !u!1001 &8613451846426052379
 PrefabInstance:
   m_ObjectHideFlags: 0
