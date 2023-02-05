@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] float baseSlow;
     [SerializeField] float enemyStageSpeedIncrease;
 
-    [Header("Game References")] 
+    [Header("Game References")]
     [SerializeField] TreeBehaviour motherTree;
 
     [Header("UI References")] 
@@ -28,7 +28,19 @@ public class GameManager : MonoBehaviour
 
     public static GameManager Instance { get; private set; }
 
-    public float StageProgress => (Time.time - _startTime) / stageTime;
+    public float StageProgress
+    {
+        get
+        {
+            var timeElapsed = Time.time - _startTime;
+            var stagesDone = IsTransitioning ? CurrentStage - 1 : CurrentStage;
+            var pastTransitions = transitionTime * (Mathf.Max(0, stagesDone - 1));
+            var currentTransition = IsTransitioning ? (Time.time - _transitionStartTime) : 0;
+
+            return (timeElapsed - pastTransitions - currentTransition) / stageTime;
+        }
+    }
+
     public float GrowingSpeed => baseGrowingSpeed;
     public float LifeForceGenerateModifier => _lifeForceGenerateModifier;
     public int CurrentStage => _currentStage;
@@ -40,7 +52,7 @@ public class GameManager : MonoBehaviour
     float _startTime;
     int _currentStage = 1;
     float _lifeForceGenerateModifier = 1;
-    
+
     bool _isTransitioning;
     float _transitionStartTime;
 
@@ -64,7 +76,7 @@ public class GameManager : MonoBehaviour
 
             _isTransitioning = true;
             _transitionStartTime = Time.time;
-            
+
             Invoke(nameof(StartStage), transitionTime);
             OnBeforeStageChange?.Invoke(_currentStage);
         }
@@ -76,7 +88,7 @@ public class GameManager : MonoBehaviour
             GameOver();
         }
     }
-    
+
     void StartStage()
     {
         _isTransitioning = false;
