@@ -81,6 +81,11 @@ public class EnemyAudioController : MonoBehaviour
 
     public void Attack()
     {
+        if (_attackClips.Length <= 0)
+        {
+            return;
+        }
+        
         _oneShotAudioSource.PlayOneShot(_attackClips[Random.Range(0, _attackClips.Length)]);
     }
 }

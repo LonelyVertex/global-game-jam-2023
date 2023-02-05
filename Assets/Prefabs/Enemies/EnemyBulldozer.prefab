@@ -301,8 +301,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _movingAudioSource: {fileID: 3028100583491024884}
   _oneShotAudioSource: {fileID: 3846629335452719774}
-  _attackClips:
-  - {fileID: 8300000, guid: 141252a270c25c34188938d512db9bf0, type: 3}
+  _attackClips: []
   _moveClips:
   - {fileID: 8300000, guid: 8d3685b612ed61045869b6b65eb3544b, type: 3}
   _takeHitClips:
