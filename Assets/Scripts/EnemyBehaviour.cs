@@ -9,6 +9,8 @@ public class EnemyBehaviour : MonoBehaviour
     [SerializeField] float attackCooldown;
     [SerializeField] CircleCollider2D circleCollider2D;
     [SerializeField] Animator _animator;
+    [SerializeField] EnemyAudioController _enemyAudioController;
+    [SerializeField] ParticleSystem _dieParticleSystem;
 
     int _currentHealth;
     float _lastAttack;
@@ -29,10 +31,16 @@ public class EnemyBehaviour : MonoBehaviour
     public void TakeDamage(int amount)
     {
         _currentHealth -= amount;
+        
+        _enemyAudioController.TakeHit();
 
         if (_currentHealth <= 0)
         {
-            Destroy(gameObject);
+            _enemyAudioController.Die();
+            _animator.SetTrigger("Die");
+            Instantiate(_dieParticleSystem, transform.position, transform.rotation);
+            
+            Destroy(gameObject, 0.167f);
         }
     }
 
@@ -43,6 +51,11 @@ public class EnemyBehaviour : MonoBehaviour
 
     void Update()
     {
+        if (+_currentHealth <= 0)
+        {
+            return;
+        }
+        
         CheckIsInRange();
         SearchTarget();
 
@@ -52,10 +65,14 @@ public class EnemyBehaviour : MonoBehaviour
         if (_isInRange)
         {
             Attack();
+            
+            _enemyAudioController.StopMoving();
         }
         else
         {
             Walk();
+            
+            _enemyAudioController.StartMoving();
         }
     }
 
@@ -92,6 +109,8 @@ public class EnemyBehaviour : MonoBehaviour
         {
             _target.TakeDamage(damage);
             _lastAttack = Time.time;
+            
+            _enemyAudioController.Attack();
         }
         
         _animator.SetBool("Attacking", true);
