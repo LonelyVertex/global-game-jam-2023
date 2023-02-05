@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2136817900}
   - component: {fileID: 2136817897}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: EnemyLumberjack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -52,7 +52,7 @@ MonoBehaviour:
   speed: 3
   damage: 10
   attackCooldown: 0.5
-  radius: 0.8
+  circleCollider2D: {fileID: 2136817897}
   _animator: {fileID: 6749040371600188023}
 --- !u!50 &2136817900
 Rigidbody2D:
@@ -90,7 +90,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.8
+  m_Radius: 1.2
 --- !u!1 &1466756813026992332
 GameObject:
   m_ObjectHideFlags: 0

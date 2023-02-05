@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    [SerializeField] GameObject enemyPrefab;
+    [SerializeField] GameObject lumberjackPrefab;
+    [SerializeField] GameObject bulldozerPrefab;
     [SerializeField] float baseRadius;
     [SerializeField] float stageRadiusIncrement;
     [SerializeField] float spawnEnemyRate;
@@ -41,9 +42,15 @@ public class EnemySpawner : MonoBehaviour
         for (var i = 0; i < 2 * GameManager.Instance.CurrentStage; i++)
         {
             var position = Random.insideUnitCircle.normalized * _currentRadius;
-            Instantiate(enemyPrefab, position, Quaternion.identity);
+            Instantiate(ChoosePrefab(), position, Quaternion.identity);
         }
 
         _lastEnemiesSpawned = Time.time;
+    }
+
+    GameObject ChoosePrefab()
+    {
+        var bulldozerChance = (GameManager.Instance.CurrentStage - 1) / 5f;
+        return Random.value < bulldozerChance ? bulldozerPrefab : lumberjackPrefab;
     }
 }

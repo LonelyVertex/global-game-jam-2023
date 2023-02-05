@@ -7,7 +7,7 @@ public class EnemyBehaviour : MonoBehaviour
     [SerializeField] float speed;
     [SerializeField] int damage;
     [SerializeField] float attackCooldown;
-    [SerializeField] float radius;
+    [SerializeField] CircleCollider2D circleCollider2D;
     [SerializeField] Animator _animator;
 
     int _currentHealth;
@@ -34,12 +34,6 @@ public class EnemyBehaviour : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
-
-    void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, radius);
     }
 
     void Start()
@@ -88,7 +82,7 @@ public class EnemyBehaviour : MonoBehaviour
         else
         {
             var distance = Vector3.Distance(transform.position, _target.transform.position);
-            _isInRange = distance <= _target.Radius + radius;
+            _isInRange = distance <= _target.Radius + circleCollider2D.radius;
         }
     }
 

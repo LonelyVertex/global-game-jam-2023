@@ -6,7 +6,6 @@ public class PlantingManager : MonoBehaviour
     public const float LifeForceEvery = 3;
 
     [SerializeField] Selection selection;
-    [SerializeField] GrowingRoot growingRoot;
     [SerializeField] GameObject growingRootPrefab;
 
     public static PlantingManager Instance { get; private set; }
