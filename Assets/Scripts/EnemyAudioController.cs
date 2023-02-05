@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class EnemyAudioController : MonoBehaviour
 {
@@ -12,7 +14,11 @@ public class EnemyAudioController : MonoBehaviour
     [SerializeField] private AudioClip[] _dieClips;
     [SerializeField] private AudioClip[] _afterStage5DieClips;
 
-    
+    private void OnDestroy()
+    {
+        StopAllCoroutines();
+    }
+
     public void StartMoving()
     {
         if (_movingAudioSource.isPlaying)
@@ -43,6 +49,11 @@ public class EnemyAudioController : MonoBehaviour
         {
             if (!_movingAudioSource.isPlaying)
             {
+                if (!_movingAudioSource.enabled)
+                {
+                    break;
+                }
+                
                 _movingAudioSource.clip = _moveClips[Random.Range(0, _moveClips.Length)];
                 _movingAudioSource.Play();
             }
