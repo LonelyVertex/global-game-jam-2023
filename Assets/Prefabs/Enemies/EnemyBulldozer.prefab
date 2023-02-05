@@ -57,6 +57,7 @@ MonoBehaviour:
   circleCollider2D: {fileID: 2136817897}
   _animator: {fileID: 5564555801005890079}
   _enemyAudioController: {fileID: 1660376049858727738}
+  _dieParticleSystem: {fileID: 4551747114678471683, guid: 5725f8774950985439e1b525e80d2c82, type: 3}
 --- !u!50 &2136817900
 Rigidbody2D:
   serializedVersion: 4
@@ -106,7 +107,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -2686613214779084296, guid: f59ba61e868d51e49b7ef37f1c9c5254, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.05
+  m_Volume: 0.15
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -202,7 +203,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -2686613214779084296, guid: f59ba61e868d51e49b7ef37f1c9c5254, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.05
+  m_Volume: 0.15
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -300,12 +301,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _movingAudioSource: {fileID: 3028100583491024884}
   _oneShotAudioSource: {fileID: 3846629335452719774}
-  _attackClips: []
+  _attackClips:
+  - {fileID: 8300000, guid: 141252a270c25c34188938d512db9bf0, type: 3}
   _moveClips:
   - {fileID: 8300000, guid: 8d3685b612ed61045869b6b65eb3544b, type: 3}
   _takeHitClips:
   - {fileID: 8300000, guid: 44bf49b956f92024085e06f973c9dbeb, type: 3}
   _dieClips:
+  - {fileID: 8300000, guid: 045152405f25ec64a98f44c164e883f0, type: 3}
+  _afterStage5DieClips:
   - {fileID: 8300000, guid: 045152405f25ec64a98f44c164e883f0, type: 3}
 --- !u!1001 &2323244582675577829
 PrefabInstance:

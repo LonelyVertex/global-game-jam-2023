@@ -10,6 +10,7 @@ public class EnemyAudioController : MonoBehaviour
     [SerializeField] private AudioClip[] _moveClips;
     [SerializeField] private AudioClip[] _takeHitClips;
     [SerializeField] private AudioClip[] _dieClips;
+    [SerializeField] private AudioClip[] _afterStage5DieClips;
 
     
     public void StartMoving()
@@ -56,8 +57,15 @@ public class EnemyAudioController : MonoBehaviour
     }
 
     public void Die()
-    {   
-        _oneShotAudioSource.PlayOneShot(_dieClips[Random.Range(0, _dieClips.Length)]);
+    {
+        if (GameManager.Instance.CurrentStage >= 5)
+        {
+            _oneShotAudioSource.PlayOneShot(_afterStage5DieClips[Random.Range(0, _afterStage5DieClips.Length)]);
+        }
+        else
+        {
+            _oneShotAudioSource.PlayOneShot(_dieClips[Random.Range(0, _dieClips.Length)]);
+        }
     }
 
     public void Attack()

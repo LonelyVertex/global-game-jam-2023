@@ -127,6 +127,18 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 248b2ef78653cd043b9b32d14492663b, type: 3}
   _dieClips:
   - {fileID: 8300000, guid: effe42b43856fd34b9c2e68e79763637, type: 3}
+  _afterStage5DieClips:
+  - {fileID: 8300000, guid: 42eb38c27482905408abac62bde84000, type: 3}
+  - {fileID: 8300000, guid: b193035c871a4bb4289a7ec9493da3a8, type: 3}
+  - {fileID: 8300000, guid: bd0d386e607e97f47acdb7fa8e410bb9, type: 3}
+  - {fileID: 8300000, guid: d9843f706aa77b646bcfc4bf85c14223, type: 3}
+  - {fileID: 8300000, guid: 83c4a68396a60c840a7865b28a390156, type: 3}
+  - {fileID: 8300000, guid: a4ef3dd6ae0e3ce469d9aa6c1907238c, type: 3}
+  - {fileID: 8300000, guid: 68822f44fa5595e46bd48cb5d2981dfa, type: 3}
+  - {fileID: 8300000, guid: 8a3a78acd7b45f54e8d9213ae7266e6c, type: 3}
+  - {fileID: 8300000, guid: e35a6c2cbdbff194a964de9c7316752e, type: 3}
+  - {fileID: 8300000, guid: 33753bb9b9704174abe0ddcc82032e2d, type: 3}
+  - {fileID: 8300000, guid: 64a8e57ae5f3920489695455eb199ece, type: 3}
 --- !u!82 &8623418724467448986
 AudioSource:
   m_ObjectHideFlags: 0
