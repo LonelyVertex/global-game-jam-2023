@@ -8,11 +8,11 @@ public class AmbientAudioManager : MonoBehaviour
     [SerializeField] private AudioClip _loopMusicClip;
     [SerializeField] private AudioClip[] _audioClips;
     [SerializeField] private Vector2 _ambientChance;
-    [SerializeField] private AudioClip _gameOverAudioClip;
     
     void Start()
     {
         GameManager.Instance.OnGameOver += HandleOnGameOver;
+        GameManager.Instance.OnBeforeStageChange += HandleOnBeforeStageChange;
 
         _musicAudioSource.Play();
     }
@@ -22,14 +22,6 @@ public class AmbientAudioManager : MonoBehaviour
         if (GameManager.Instance.IsGameOver)
         {
             return;
-        }
-        
-        if (!_musicAudioSource.isPlaying)
-        {
-            _musicAudioSource.clip = _loopMusicClip;
-            _musicAudioSource.loop = true;
-            
-            _musicAudioSource.Play();
         }
         
         if (_ambientAudioSource.isPlaying)
@@ -57,5 +49,16 @@ public class AmbientAudioManager : MonoBehaviour
         _musicAudioSource.Stop();
 
         _gameOverAudioSource.Play();
+    }
+
+    private void HandleOnBeforeStageChange(int stage)
+    {
+        if (stage == 6)
+        {
+            _musicAudioSource.clip = _loopMusicClip;
+            _musicAudioSource.loop = true;
+            
+            _musicAudioSource.Play(); 
+        }
     }
 }
