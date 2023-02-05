@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -110,7 +107,8 @@ public class EnemyBehaviour : MonoBehaviour
     {
         var targetPosition = _target.transform.position;
         var direction = (targetPosition - transform.position).normalized;
-        var movementSpeed = _slowModifiers > 0 ? speed * GameManager.Instance.SlowModifier : speed;
+        var baseSpeed = speed * GameManager.Instance.EnemySpeedModifier;
+        var movementSpeed = _slowModifiers > 0 ? baseSpeed * GameManager.Instance.SlowModifier : baseSpeed;
 
         transform.right = direction;
         transform.Translate(direction * (movementSpeed * Time.deltaTime), Space.World);

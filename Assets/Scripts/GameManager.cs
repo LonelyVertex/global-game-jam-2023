@@ -11,9 +11,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] float transitionTime;
     [SerializeField] float baseGrowingSpeed;
     [SerializeField] float baseSlow;
-
-    [Header("Other Settings")] 
-    [SerializeField] float resizeSpeed;
+    [SerializeField] float enemyStageSpeedIncrease;
 
     [Header("Game References")] 
     [SerializeField] TreeBehaviour motherTree;
@@ -37,6 +35,7 @@ public class GameManager : MonoBehaviour
     public float SlowModifier => baseSlow;
     public bool IsTransitioning => _isTransitioning;
     public float TransitionProgress => (Time.time - _transitionStartTime) / transitionTime;
+    public float EnemySpeedModifier => 1 + (CurrentStage - 1) * enemyStageSpeedIncrease;
 
     float _startTime;
     int _currentStage = 1;

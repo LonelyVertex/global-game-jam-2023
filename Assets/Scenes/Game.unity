@@ -3926,7 +3926,7 @@ MonoBehaviour:
   transitionTime: 4
   baseGrowingSpeed: 1
   baseSlow: 0.5
-  resizeSpeed: 5
+  enemyStageSpeedIncrease: 0.75
   motherTree: {fileID: 480222600}
   motherTreeHealthSlider: {fileID: 697732881}
   upgradePanel: {fileID: 1130693886}
