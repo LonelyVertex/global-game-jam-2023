@@ -50,7 +50,7 @@ public class EnemySpawner : MonoBehaviour
 
     GameObject ChoosePrefab()
     {
-        var bulldozerChance = (GameManager.Instance.CurrentStage - 1) / 5f;
+        var bulldozerChance = (GameManager.Instance.CurrentStage - 1) / 7f;
         return Random.value < bulldozerChance ? bulldozerPrefab : lumberjackPrefab;
     }
 }
