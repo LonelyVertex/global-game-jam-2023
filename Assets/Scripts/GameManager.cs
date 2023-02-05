@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
 
     public event Action<int> OnBeforeStageChange;
     public event Action OnAfterStageChange;
+    public event Action OnGameOver;
 
     public static GameManager Instance { get; private set; }
 
@@ -42,6 +43,8 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public bool IsGameOver => _isGameOver;
+
     public float GrowingSpeed => baseGrowingSpeed;
     public float LifeForceGenerateModifier => _lifeForceGenerateModifier;
     public int CurrentStage => _currentStage;
@@ -56,6 +59,7 @@ public class GameManager : MonoBehaviour
 
     bool _isTransitioning;
     float _transitionStartTime;
+    bool _isGameOver;
 
     void Awake()
     {
@@ -69,6 +73,11 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        if (_isGameOver)
+        {
+            return;
+        }
+
         if (StageProgress > _currentStage)
         {
             _currentStage++;
@@ -108,6 +117,12 @@ public class GameManager : MonoBehaviour
 
     void GameOver()
     {
+        _isGameOver = true;
+        
+        DestroyEnemies();
+        
+        OnGameOver?.Invoke();
+        
         gameOverPanel.SetActive(true);
         gameOverStageText.text = $"You made it to stage {_currentStage}!";
     }
