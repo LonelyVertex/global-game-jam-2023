@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject upgradePanel;
     [SerializeField] GameObject gameOverPanel;
     [SerializeField] TMP_Text gameOverStageText;
+    [SerializeField] TMP_Text stageText;
 
 
     public event Action<int> OnBeforeStageChange;
@@ -92,21 +93,9 @@ public class GameManager : MonoBehaviour
     void StartStage()
     {
         _isTransitioning = false;
+        stageText.text = $"{CurrentStage}";
         OnAfterStageChange?.Invoke();
     }
-
-    // public void OnUpgrade1Selected()
-    // {
-    //     // ...
-    //     OnAfterUpgrade();
-    // }
-
-    // void OnAfterUpgrade()
-    // {
-    //     Time.timeScale = 1;
-    //     upgradePanel.SetActive(false);
-    //     OnStageChange?.Invoke(_currentStage);
-    // }
 
     void DestroyEnemies()
     {
