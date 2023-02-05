@@ -4,7 +4,8 @@ using UnityEngine;
 public class GrowingRoot : MonoBehaviour
 {
     [SerializeField] LineRenderer lineRenderer;
-
+    [SerializeField] private GrowingRootAudioController _growingRootAudioController;
+    
     public Action OnReachDestination;
     
     Vector3 _startPosition;
@@ -22,6 +23,8 @@ public class GrowingRoot : MonoBehaviour
         lineRenderer.SetPosition(1, _startPosition);
         _distance = Vector3.Distance(_startPosition, _targetPosition);
         _isGrowing = true;
+        
+        _growingRootAudioController.StartGrowing();
     }
 
     void Update()
@@ -35,6 +38,7 @@ public class GrowingRoot : MonoBehaviour
         {
             OnReachDestination?.Invoke();
             _isGrowing = false;
+            _growingRootAudioController.StopGrowing();
             return;
         }
 
