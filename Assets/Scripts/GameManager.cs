@@ -21,6 +21,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject upgradePanel;
     [SerializeField] GameObject gameOverPanel;
     [SerializeField] TMP_Text gameOverStageText;
+    [SerializeField] TMP_Text scoreText;
+    [SerializeField] TMP_InputField nicknameInput;
     [SerializeField] TMP_Text stageText;
 
 
@@ -54,12 +56,14 @@ public class GameManager : MonoBehaviour
     public float EnemySpeedModifier => 1 + (CurrentStage - 1) * enemyStageSpeedIncrease;
 
     float _startTime;
+    int _score;
     int _currentStage = 1;
     float _lifeForceGenerateModifier = 1;
 
     bool _isTransitioning;
     float _transitionStartTime;
     bool _isGameOver;
+    private SaveDataController _saveDataController = new ();
 
     void Awake()
     {
@@ -122,18 +126,35 @@ public class GameManager : MonoBehaviour
         DestroyEnemies();
         
         OnGameOver?.Invoke();
+
+        _score = Mathf.RoundToInt((Time.time - _startTime) * 100);
         
         gameOverPanel.SetActive(true);
         gameOverStageText.text = $"You made it to stage {_currentStage}!";
+        scoreText.text = $"Score {_score}";
     }
 
     public void Restart()
     {
+        SaveScore();
+        
         SceneManager.LoadScene(1);
     }
 
     public void Menu()
     {
+        SaveScore();
+        
         SceneManager.LoadScene(0);
+    }
+
+    private void SaveScore()
+    {
+        var nickname = nicknameInput.text;
+
+        if (!string.IsNullOrEmpty(nickname) && _score > 0)
+        {
+            _saveDataController.SaveHighScore(nickname, _score);
+        }
     }
 }
